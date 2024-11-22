@@ -1,34 +1,16 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+      url-base: https://github.com/petejohanson
+    - name: gpeye
+      url-base: https://github.com/GPeye
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: f8eff2fe34609c91211c25113f9d7db09f7d1689  # main
+      revision: feat/pointers-move-scroll
       import: app/west.yml
-    - name: zephyr
-      remote: zmkfirmware
-      revision: 7a7c0b521f233b6d936ede5d53b8d64b00abc11e  # v3.5.0+zmk-fixes
-      import:
-        name-blocklist:
-          - ci-tools
-          - hal_altera
-          - hal_cypress
-          - hal_infineon
-          - hal_microchip
-          - hal_nxp
-          - hal_openisa
-          - hal_silabs
-          - hal_xtensa
-          - hal_st
-          - hal_ti
-          - loramac-node
-          - mcuboot
-          - mcumgr
-          - net-tools
-          - openthread
-          - edtt
-          - trusted-firmware-m
+    - name: urchin-peripheral-animation
+      remote: gpeye
+      revision: main 
   self:
     path: config
